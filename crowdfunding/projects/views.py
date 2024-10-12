@@ -5,7 +5,7 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import Project, Pledge
-from .serializers import ProjectSerializer, PledgeSerializer, ProjectDetailSerializer
+from .serializers import ProjectSerializer, PledgeSerializer, PledgeDetailSerializer, ProjectDetailSerializer
 from django.http import Http404
 from rest_framework import status, permissions
 from .permissions import IsOwnerOrReadOnly, IsPledgeOwner
@@ -72,14 +72,14 @@ class PledgeList(APIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def get(self, request):
-        pledges = Pledge.objects.all()
-        serializer = PledgeSerializer(pledges, many=True)
+        pledge = Pledge.objects.all()
+        serializer = PledgeSerializer(pledge, many=True)
         return Response(serializer.data)
 
     def post(self, request):
         serializer = PledgeSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save(owner=request.user)
+            serializer.save(supporter=request.user)
             return Response(
                 serializer.data,
                 status=status.HTTP_201_CREATED
@@ -90,12 +90,11 @@ class PledgeList(APIView):
         )
 
 
-    class PledgeDetail(APIView):
+class PledgeDetail(APIView):
 
-        permission_classes = [
-            permissions.IsAuthenticatedOrReadOnly,
-            IsPledgeOwner
-        ]
+    permission_classes = [
+        permissions.IsAuthenticatedOrReadOnly
+    ]
 
     def get_object(self, pk):
         try:
@@ -107,12 +106,12 @@ class PledgeList(APIView):
 
     def get(self, request, pk):
         pledge = self.get_object(pk)
-        serializer = PledgeSerializer(project)
+        serializer = PledgeDetailSerializer(pledge)  
         return Response(serializer.data)
 
     def put(self, request, pk):
         pledge = self.get_object(pk)
-        serializer = PledgeSerializer(
+        serializer = PledgeDetailSerializer( 
             instance=pledge,
             data=request.data,
             partial=True
