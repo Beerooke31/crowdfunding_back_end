@@ -11,21 +11,21 @@ Kickstarter, Go Fund Me, Kiva, Change.org, Patreon… All of these different web
 Your crowdfunding project must:
 
 - [ ] Be separated into two distinct projects: an API built using the Django Rest Framework and a website built using React.
-- [X] Have a cool name, bonus points if it includes a pun and/or missing vowels. See https://namelix.com/ for inspiration. <sup><sup>(Bonus Points are meaningless)</sup></sup>
-- [X] Have a clear target audience.
-- [X] Have user accounts. A user should have at least the following attributes:
-  - [X] Username
+- [x] Have a cool name, bonus points if it includes a pun and/or missing vowels. See https://namelix.com/ for inspiration. <sup><sup>(Bonus Points are meaningless)</sup></sup>
+- [x] Have a clear target audience.
+- [x] Have user accounts. A user should have at least the following attributes:
+  - [x] Username
   - [ ] Email address
-  - [ ] Password
-- [X] Ability to create a “project” to be crowdfunded which will include at least the following attributes:
-  - [X] Title
-  - [X] Owner (a user)
-  - [X] Description
-  - [X] Image
-  - [X] Target amount to fundraise
-  - [X] Whether it is currently open to accepting new supporters or not
-  - [X] When the project was created
-- [ ] Ability to “pledge” to a project. A pledge should include at least the following attributes:
+  - [x] Password
+- [x] Ability to create a “project” to be crowdfunded which will include at least the following attributes:
+  - [x] Title
+  - [x] Owner (a user)
+  - [x] Description
+  - [x] Image
+  - [x] Target amount to fundraise
+  - [x] Whether it is currently open to accepting new supporters or not
+  - [x] When the project was created
+- [x] Ability to “pledge” to a project. A pledge should include at least the following attributes:
   - [ ] An amount
   - [ ] The project the pledge is for
   - [ ] The supporter/user (i.e. who created the pledge)
