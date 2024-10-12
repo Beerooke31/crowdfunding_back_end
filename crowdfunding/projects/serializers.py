@@ -4,6 +4,8 @@ from django.apps import apps
 
 
 class PledgeSerializer(serializers.ModelSerializer):
+    supporter = serializers.ReadOnlyField(source='supporter.id')
+
     class Meta:
         model = apps.get_model('projects.Pledge')
         fields = '__all__'
@@ -16,16 +18,6 @@ class PledgeSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
     
-class PledgeDetailSerializer(serializers.ModelSerializer):
-    pledges = PledgeSerializer(many=True, read_only=True)
-
-    def update(self, instance, validated_data):
-            instance.amount = validated_data.get('amount', instance.amount)
-            instance.comment = validated_data.get('comment', instance.comment)
-            instance.anonymous = validated_data.get('anonymous', instance.anonymous)
-            instance.project = validated_data.get('project', instance.project)
-            instance.save()
-            return instance
 
 class ProjectSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.id')
@@ -44,6 +36,17 @@ class ProjectDetailSerializer(ProjectSerializer):
         instance.is_open = validated_data.get('is_open', instance.is_open)
         instance.date_created = validated_data.get('date_created', instance.date_created)
         instance.owner = validated_data.get('owner', instance.owner)
+        instance.save()
+        return instance
+    
+class PledgeDetailSerializer(PledgeSerializer):
+    # project = ProjectSerializer(many=True, read_only=True)
+
+    def update(self, instance, validated_data):
+        instance.amount = validated_data.get('amount', instance.amount)
+        instance.comment = validated_data.get('comment', instance.comment)
+        instance.anonymous = validated_data.get('anonymous', instance.anonymous)
+        instance.project = validated_data.get('project', instance.project)
         instance.save()
         return instance
 
