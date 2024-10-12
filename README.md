@@ -4,17 +4,17 @@ A repo to contain my SheCodes crowdfunding project
 
 # Crowdfunding Back End
 
-{{ your name here }}
+{{ Brooke Pierson }}
 
 ## Planning:
 
 ### Concept/Name
 
-{{ Include a short description of your website concept here. }}
+{{ Starbounty - A crowdfunding platform to fund occult research. For example, exploration of a haunted house or a UFO crash landing site. Researchers can post their projects and gain funding for their research, from tools they require to travel expenses. }}
 
 ### Intended Audience/User Stories
 
-{{ Who are your intended audience? How will they use the website? }}
+{{ My intended audience is anyone who is interested in learning more about the mysteries of this vast universe that we call home. It's for both people who want to actively seek answers and those who want the answers given to them. }}
 
 ### Front End Pages/Functionality
 
