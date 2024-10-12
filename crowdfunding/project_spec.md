@@ -13,18 +13,18 @@ Your crowdfunding project must:
 - [ ] Be separated into two distinct projects: an API built using the Django Rest Framework and a website built using React.
 - [X] Have a cool name, bonus points if it includes a pun and/or missing vowels. See https://namelix.com/ for inspiration. <sup><sup>(Bonus Points are meaningless)</sup></sup>
 - [X] Have a clear target audience.
-- [ ] Have user accounts. A user should have at least the following attributes:
-  - [ ] Username
+- [X] Have user accounts. A user should have at least the following attributes:
+  - [X] Username
   - [ ] Email address
   - [ ] Password
-- [ ] Ability to create a “project” to be crowdfunded which will include at least the following attributes:
-  - [ ] Title
-  - [ ] Owner (a user)
-  - [ ] Description
-  - [ ] Image
-  - [ ] Target amount to fundraise
-  - [ ] Whether it is currently open to accepting new supporters or not
-  - [ ] When the project was created
+- [X] Ability to create a “project” to be crowdfunded which will include at least the following attributes:
+  - [X] Title
+  - [X] Owner (a user)
+  - [X] Description
+  - [X] Image
+  - [X] Target amount to fundraise
+  - [X] Whether it is currently open to accepting new supporters or not
+  - [X] When the project was created
 - [ ] Ability to “pledge” to a project. A pledge should include at least the following attributes:
   - [ ] An amount
   - [ ] The project the pledge is for
