@@ -40,7 +40,6 @@ class ProjectDetailSerializer(ProjectSerializer):
         return instance
     
 class PledgeDetailSerializer(PledgeSerializer):
-    # project = ProjectSerializer(many=True, read_only=True)
 
     def update(self, instance, validated_data):
         instance.amount = validated_data.get('amount', instance.amount)

@@ -26,16 +26,16 @@ Your crowdfunding project must:
   - [x] Whether it is currently open to accepting new supporters or not
   - [x] When the project was created
 - [x] Ability to “pledge” to a project. A pledge should include at least the following attributes:
-  - [ ] An amount
-  - [ ] The project the pledge is for
-  - [ ] The supporter/user (i.e. who created the pledge)
-  - [ ] Whether the pledge is anonymous or not
-  - [ ] A comment to go along with the pledge
+  - [x] An amount
+  - [x] The project the pledge is for
+  - [x] The supporter/user (i.e. who created the pledge)
+  - [x] Whether the pledge is anonymous or not
+  - [x] A comment to go along with the pledge
 - [ ] Implement suitable update/delete functionality, e.g. should a project owner be allowed to update a project description?
 - [ ] Implement suitable permissions, e.g. who is allowed to delete a pledge?
 - [ ] Return the relevant status codes for both successful and unsuccessful requests to the API.
 - [ ] Handle failed requests gracefully (e.g. you should have a custom 404 page rather than the default error page).
-- [ ] Use Token Authentication, including an endpoint to obtain a token along with the current user's details.
+- [X] Use Token Authentication, including an endpoint to obtain a token along with the current user's details.
 - [ ] Implement responsive design.
 
 ## Additional Notes
