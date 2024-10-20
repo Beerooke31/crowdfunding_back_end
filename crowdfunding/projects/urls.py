@@ -7,5 +7,4 @@ urlpatterns = [
     path('pledges/', views.PledgeList.as_view()),
     path('pledges/<int:pk>/', views.PledgeDetail.as_view()),
     path('api-auth/', include('rest_framework.urls')),
-    path('login/', views.LoginUser.as_view()),
 ]
