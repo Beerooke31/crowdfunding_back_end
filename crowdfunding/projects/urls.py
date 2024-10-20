@@ -8,5 +8,4 @@ urlpatterns = [
     path('pledges/<int:pk>/', views.PledgeDetail.as_view()),
     path('api-auth/', include('rest_framework.urls')),
     path('login/', views.LoginUser.as_view()),
-    path('logout/', views.LogoutUser.as_view())
 ]

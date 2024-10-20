@@ -144,8 +144,8 @@ class PledgeDetail(APIView):
             status=status.HTTP_400_BAD_REQUEST
         )
     
-class LoginUser(APIView):
+# class LoginUser(APIView):
 
 
-class LogoutUser(APIView):
-    
+
+
