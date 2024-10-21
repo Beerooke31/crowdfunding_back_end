@@ -34,9 +34,14 @@ It might look messy here in the PDF, but once it's rendered it looks very neat!
 
 It can be helpful to keep the markdown preview open in VS Code so that you can see what you're typing more easily. }}
 
-| URL | HTTP Method | Purpose | Purpose | Request Body | Success Response Code | Authentication/Authorisation |
-| --- | ----------- | ------- | ------- | ------------ | --------------------- | ---------------------------- |
-|     |             |         |         |              |                       |                              |
+| URL | HTTP Method | Purpose | Request Body | Success Response Code | Authentication/Authorisation |
+| /projects/ | GET | Returns all projects | N/A | 200 | N/A |
+| /pledges/ | GET | Returns all pledges | N/A | 200 | N/A |
+| /users/ | GET | Returns a list of all users | 200 | Must be admin?|
+| /projects/ | POST | Creates a new project | 201 | Must be logged in |
+| /pledges/ | POST | Creates a new pledge | 201 | Must be logged in |
+| /users/ | POST | Creates a new user | 201 | Must be logged in |
+| /projects/1/ | PUT | Updates project 1 | 200 | Must be logged in and project owner |
 
 ### DB Schema
 
