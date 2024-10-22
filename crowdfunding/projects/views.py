@@ -11,7 +11,6 @@ from rest_framework import status, permissions
 from .permissions import IsOwnerOrReadOnly, IsSupporterOrReadOnly
 
 
-
 class ProjectList(APIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
@@ -36,10 +35,6 @@ class ProjectList(APIView):
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
     
-    def delete(self, request, pk, format=None):
-        projects = Project.get_object(pk)
-        projects.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
     
 class ProjectDetail(APIView):
 
@@ -76,6 +71,11 @@ class ProjectDetail(APIView):
             serializer.errors,
             status=status.HTTP_400_BAD_REQUEST
         )
+    
+    def delete(self, request, pk, format=None):
+        project = self.get_object(pk)
+        project.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 class PledgeList(APIView):
@@ -102,10 +102,6 @@ class PledgeList(APIView):
     def perform_create(self, serializer):
         serializer.save(supporter=self.request.user)
 
-    def delete(self, request, pk, format=None):
-        pledge = Pledge.get_object(pk)
-        pledge.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 class PledgeDetail(APIView):
@@ -144,7 +140,12 @@ class PledgeDetail(APIView):
             status=status.HTTP_400_BAD_REQUEST
         )
     
-# class LoginUser(APIView):
+    def delete(self, request, pk, format=None):
+        pledge = self.get_object(pk)
+        pledge.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+    
+
 
 
 
