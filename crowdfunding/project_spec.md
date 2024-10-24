@@ -10,7 +10,7 @@ Kickstarter, Go Fund Me, Kiva, Change.org, Patreon… All of these different web
 
 Your crowdfunding project must:
 
-- [X] Be separated into two distinct projects: an API built using the Django Rest Framework and a website built using React.
+- [x] Be separated into two distinct projects: an API built using the Django Rest Framework and a website built using React.
 - [x] Have a cool name, bonus points if it includes a pun and/or missing vowels. See https://namelix.com/ for inspiration. <sup><sup>(Bonus Points are meaningless)</sup></sup>
 - [x] Have a clear target audience.
 - [x] Have user accounts. A user should have at least the following attributes:
@@ -31,12 +31,12 @@ Your crowdfunding project must:
   - [x] The supporter/user (i.e. who created the pledge)
   - [x] Whether the pledge is anonymous or not
   - [x] A comment to go along with the pledge
-- [ ] Implement suitable update/delete functionality, e.g. should a project owner be allowed to update a project description?
-- [ ] Implement suitable permissions, e.g. who is allowed to delete a pledge?
-- [ ] Return the relevant status codes for both successful and unsuccessful requests to the API.
-- [X] Handle failed requests gracefully (e.g. you should have a custom 404 page rather than the default error page).
-- [X] Use Token Authentication, including an endpoint to obtain a token along with the current user's details.
-- [ ] Implement responsive design.
+- [x] Implement suitable update/delete functionality, e.g. should a project owner be allowed to update a project description?
+- [x] Implement suitable permissions, e.g. who is allowed to delete a pledge?
+- [x] Return the relevant status codes for both successful and unsuccessful requests to the API.
+- [x] Handle failed requests gracefully (e.g. you should have a custom 404 page rather than the default error page).
+- [x] Use Token Authentication, including an endpoint to obtain a token along with the current user's details.
+- [x] Implement responsive design.
 
 ## Additional Notes
 
@@ -50,7 +50,7 @@ To submit, fill out [this Google form](https://forms.gle/34ymxgPhdT8YXDgF6), inc
 
 Please include the following in your readme doc:
 
-- [ ] A link to the deployed project.
+- [x] A link to the deployed project.
 - [ ] A screenshot of Insomnia, demonstrating a successful GET method for any endpoint.
 - [ ] A screenshot of Insomnia, demonstrating a successful POST method for any endpoint.
 - [ ] A screenshot of Insomnia, demonstrating a token being returned.
