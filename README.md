@@ -59,7 +59,7 @@ A secondary user is an individual who doesn't necessarily want to seek answers a
 
 ### DB Schema
 
-./screenshots
+[ERD_Diagram](./Crowdfunding_ERD.png)
 
 ### Link to deployed project
 
@@ -67,10 +67,10 @@ https://starbounty-d5b76e766824.herokuapp.com/
 
 ### Insomnia Screenshots
 
-./screenshots
+[Insomnia Screenshots](./screenshots)
 
 ### User and Project Registration Steps
 
-./User_Steps.png
+[User Steps](./User_Steps.png)
 
-./Project_Steps.png
+[Project Steps](./Project_Steps.png)
