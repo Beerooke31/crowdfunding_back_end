@@ -36,7 +36,7 @@ Your crowdfunding project must:
 - [x] Return the relevant status codes for both successful and unsuccessful requests to the API.
 - [x] Handle failed requests gracefully (e.g. you should have a custom 404 page rather than the default error page).
 - [x] Use Token Authentication, including an endpoint to obtain a token along with the current user's details.
-- [x] Implement responsive design.
+- [ ] Implement responsive design.
 
 ## Additional Notes
 

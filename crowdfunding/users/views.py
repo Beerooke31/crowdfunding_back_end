@@ -1,15 +1,19 @@
 from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework import status
+from rest_framework import status, permissions
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token 
 from .models import CustomUser
 from .serializers import CustomUserSerializer
+from .permissions import IsUserOrReadOnly
 
 class CustomUserList(APIView):
+    permission_classes = [permissions.IsAuthenticated, IsUserOrReadOnly]
+
     def get(self, request):
         users = CustomUser.objects.all()
+        self.check_object_permissions(self.request, users)
         serializer = CustomUserSerializer(users, many=True)
         return Response(serializer.data)
 
